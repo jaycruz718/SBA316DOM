@@ -12,3 +12,9 @@ document.querySelectorAll(".nav-links a").forEach(link => {
     navLinks.classList.remove("active");
   });
 });
+
+const loginBtn = document.getElementById("login-link");
+
+loginBtn.addEventListener("click", () => {
+  window.location.href = "login.html";
+});

@@ -71,6 +71,11 @@ h1 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.navbar {
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .brand {
   font-size: 1.5rem;
   font-weight: bold;

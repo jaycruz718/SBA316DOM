@@ -3,6 +3,7 @@
     margin:0%;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
+    background-color: black;
 }
 
 .section {
@@ -28,6 +29,10 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.navbar {
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+}
+
 .brand {
   font-size: 1.5rem;
   font-weight: bold;
@@ -40,7 +45,7 @@
 }
 
 .nav-links a {
-  color: white;
+  color: orange;
   text-decoration: none;
   font-size: 1rem;
 }
