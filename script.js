@@ -1,40 +1,34 @@
-const Days = document.getElementById('days');
-const Hours = document.getElementById('hours');
-const Minutes = document.getElementById('minutes');
-const Seconds = document.getElementById('seconds');
+// === 🎃 HALLOWEEN COUNTDOWN ===
+function updateCountdown() {
+  const now = new Date().getTime();
+  const halloweenDate = new Date("October 31, 2025 00:00:00").getTime();
+  const distance = halloweenDate - now;
 
-const targetDate = new Date("October 31 2025 00:00:00").getTime();
+  if (distance < 0) {
+    document.querySelector(".timebox").innerHTML = "<h2>🎃 It's Halloween! Boo!</h2>";
+    return;
+  }
 
-function timer() {
-    const currentDate = new Date().getTime();
-    const distance = targetDate - currentDate;
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    const days = Math.floor (distance / 1000 / 60 / 60 / 24);
-    const hours = Math.floor (distance / 1000 / 60 / 60) % 24;
-    const minutes = Math.floor (distance / 1000 / 60) % 60;
-    const seconds = Math.floor (distance / 1000) % 60;
-
-    Days.innerHTML = days;
-    Hours.innerHTML = hours;
-    Minutes.innerHTML = minutes;
-    Seconds.innerHTML = seconds;
-
-    if(distance < 0) {
-        Days.innerHTML = "00";
-        Hours.innerHTML = "00";
-        Minutes.innerHTML = "00";
-        Seconds.innerHTML = "00";
-    }
+  document.getElementById("days").innerText = String(days).padStart(2, "0");
+  document.getElementById("hours").innerText = String(hours).padStart(2, "0");
+  document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
+  document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
 }
 
-setInterval(timer, 1000);
+setInterval(updateCountdown, 1000);
+updateCountdown(); // run once immediately
 
-
-document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
-
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-});
+// === 🕸️ Ensure Video Covers Background Fully ===
+const bgVideo = document.getElementById("bg-video");
+bgVideo.style.position = "fixed";
+bgVideo.style.top = "0";
+bgVideo.style.left = "0";
+bgVideo.style.width = "100%";
+bgVideo.style.height = "100%";
+bgVideo.style.objectFit = "cover";
+bgVideo.style.zIndex = "-1";

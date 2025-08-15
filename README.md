@@ -9,3 +9,12 @@
 ### Navigation Bar
 - Added orange to the font.
 
+## Contact Page
+- Thinking about putting music into the page.
+- 
+
+
+
+
+## Resources
+- https://coolors.co/palettes/trending
