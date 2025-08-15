@@ -1,20 +1,32 @@
-const toggleBtn = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("login-form");
+  const username = document.getElementById("username");
+  const password = document.getElementById("password");
+  const errorMsg = document.getElementById("error-msg");
 
-// Toggle mobile menu visibility
-toggleBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent form from submitting
 
-// Optional: Close menu when link is clicked (on mobile)
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
+    const user = username.value.trim();
+    const pass = password.value.trim();
+
+    // Simple validation
+    if (user === "" || pass === "") {
+      errorMsg.textContent = "Please fill in both username and password.";
+      return;
+    }
+
+    // Fake login check (you can replace this with real authentication)
+    if (user === "admin" && pass === "halloween123") {
+      errorMsg.style.color = "green";
+      errorMsg.textContent = "Login successful! 🎃 Redirecting...";
+      setTimeout(() => {
+        // Redirect to homepage or dashboard
+        window.location.href = "/index.html";
+      }, 1500);
+    } else {
+      errorMsg.style.color = "red";
+      errorMsg.textContent = "Invalid username or password. Try again.";
+    }
   });
-});
-
-const loginBtn = document.getElementById("login-link");
-
-loginBtn.addEventListener("click", () => {
-  window.location.href = "login.html";
 });

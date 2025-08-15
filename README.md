@@ -7,3 +7,5 @@
 - Now going to continue to work on the other parts of the assignment.
 
 ### Navigation Bar
+- Added orange to the font.
+

@@ -7,15 +7,40 @@
     <title>Document</title>
 </head>
 <body>
-     <nav>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="LogInPage.html" id="login-link">Log In/Register</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    
+      <header>
+            <nav>
+                <ul>
+                    <li><a href="/index.html" id="home-link">Home</a></li>
+                    <li><a href="/Pages/LogInPage.html" id="login-link">Login/Register</a></li>
+                    <li><a href="#about">About</a></li>   
+                    <li><a href="#contact">Contact</a></li> 
+                </ul>
+            </nav>
+      </header>
+
+    <section class="login-section">
+   <div class="wrapper">
+    <form action="login-form">
+        <h1>Login</h1>
+        <div class="input-box">
+            <input type="text" placeholder="Username" required>
+        </div>
+        <div class="input-box">
+            <input type="password" placeholder="Password" required>
+        </div>
+        <div class="remember-forgot">
+            <label><input type="checkbox"> Remember me</label>
+            <a href="#">Forget Password?</a>
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+
+        <div class="register-link">
+            <p>Don't have an account?<a href="#">Register</a></p>
+        </div>
+    </form>
+   </div>
+</section>
 
 
 <script src="/JS.js/login.js"></script>    
