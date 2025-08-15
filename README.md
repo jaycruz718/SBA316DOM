@@ -6,3 +6,4 @@
 - I fixed the issue I was having with my background video not playing.
 - Now going to continue to work on the other parts of the assignment.
 
+### Navigation Bar

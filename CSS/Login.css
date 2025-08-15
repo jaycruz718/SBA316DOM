@@ -1,51 +1,8 @@
-
-#bg-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-    object-fit: cover;
-}
-
 * {
     padding: 0%;
     margin:0%;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
-}
-
-.hero {
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.5)),
-    rgba (0,0,0,0.5), url();
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: orange;
-}
-
-h1 {
-    font-size: 4rem;
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.timebox {
-    display: flex;
-    gap: 90px;
-}
-.time {
-    text-align: center;
-}
-
-.time h2 {
-    font-size: 5rem;
-    font-weight: 100;
 }
 
 .section {
