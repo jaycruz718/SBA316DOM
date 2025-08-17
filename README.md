@@ -11,7 +11,9 @@
 
 ## Contact Page
 - Thinking about putting music into the page.
-- 
+
+## Register Page
+- Decided to create a Register page for testing.
 
 
 
