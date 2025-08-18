@@ -1,5 +1,5 @@
 #### The DOM Project 
-- It's due on Sunday night.
+- It's due on Monday night.
 
 ## Timer
 - Added a countdown time to Halloween on my first page 
