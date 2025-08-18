@@ -14,9 +14,12 @@
 
 ## Register Page
 - Decided to create a Register page for testing.
+- I was having problems with the Google icon page so I found another one. 
+- This website helped so much.
 
 
 
 
 ## Resources
 - https://coolors.co/palettes/trending
+- https://icons8.com/icons
